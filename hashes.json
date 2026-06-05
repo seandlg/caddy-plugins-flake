@@ -1,0 +1,7 @@
+{
+  "cloudflare": "sha256-bzMqxWTqrJ1skZmRTXyEMCKStXpljbqe5r0Ve2cnBfM=",
+  "route53": "sha256-3341QME4QDm+Q4nFZHCbfjToSaZi7lCS0gQlG+2BRoU=",
+  "ratelimit": "sha256-7PrbuNSTHAoCPpCumXyvAM72EmfefYHfAp7y+caM8ZY=",
+  "l4": "sha256-CQ4vKkQ9sE6v5C0gcyYPBnDzJiPw5z14a3lY0BLZ81A=",
+  "full": "sha256-RgEPCtBUz8cBsa2YjS5Vcl7D24w+pppCNFbQIW1w4ao="
+}
