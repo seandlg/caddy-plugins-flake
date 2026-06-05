@@ -63,14 +63,54 @@
         {
           test-cloudflare = pkgs.runCommand "test-cloudflare" { } ''
             ${caddy-cloudflare}/bin/caddy list-modules | grep "dns.providers.cloudflare"
+            
+            cat <<EOF > Caddyfile
+            localhost:8080 {
+              tls {
+                dns cloudflare abcdefghijklmnopqrstuvwxyz0123456789ABCD
+              }
+              respond "Hello"
+            }
+            EOF
+            
+            ${caddy-cloudflare}/bin/caddy validate --adapter caddyfile --config Caddyfile
             touch $out
           '';
           test-route53 = pkgs.runCommand "test-route53" { } ''
             ${caddy-route53}/bin/caddy list-modules | grep "dns.providers.route53"
+            
+            cat <<EOF > Caddyfile
+            localhost:8080 {
+              tls {
+                dns route53
+              }
+              respond "Hello"
+            }
+            EOF
+            
+            ${caddy-route53}/bin/caddy validate --adapter caddyfile --config Caddyfile
             touch $out
           '';
           test-ratelimit = pkgs.runCommand "test-ratelimit" { } ''
             ${caddy-ratelimit}/bin/caddy list-modules | grep "http.handlers.rate_limit"
+            
+            cat <<EOF > Caddyfile
+            {
+              order rate_limit before basicauth
+            }
+            http://localhost:8080 {
+              rate_limit {
+                zone custom_zone {
+                  key {remote_ip}
+                  events 10
+                  window 1m
+                }
+              }
+              respond "Hello"
+            }
+            EOF
+            
+            ${caddy-ratelimit}/bin/caddy validate --adapter caddyfile --config Caddyfile
             touch $out
           '';
           test-l4 = pkgs.runCommand "test-l4" { } ''
