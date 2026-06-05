@@ -1,6 +1,11 @@
 {
   description = "A portable, customizable Caddy binary with popular plugins built in";
 
+  nixConfig = {
+    extra-substituters = [ "https://caddy-plugins-flake.cachix.org" ];
+    extra-trusted-public-keys = [ "caddy-plugins-flake.cachix.org-1:HoaZQpWz4ESnl8Rch6/wlGd5xiZ55LlMKFTxc4M6SO4=" ];
+  };
+
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
   outputs = { self, nixpkgs }:

@@ -14,5 +14,11 @@ jobs:
       - name: Install Magic Nix Cache
         uses: DeterminateSystems/determinate-nix-action@v3
 
+      - name: Setup Cachix
+        uses: cachix/cachix-action@v15
+        with:
+          name: caddy-plugins-flake
+          authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
+
       - name: Run Nix Checks
         run: nix flake check -L
