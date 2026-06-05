@@ -7,12 +7,34 @@ on:
 
 jobs:
   check:
-    runs-on: ubuntu-latest
+    name: ${{ matrix.system }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            system: x86_64-linux
+          - os: ubuntu-latest
+            system: aarch64-linux
+            emulated: true
+          - os: macos-14
+            system: aarch64-darwin
+          - os: macos-13
+            system: x86_64-darwin
     steps:
       - uses: actions/checkout@v4
 
+      - name: Set up QEMU for ARM64 Linux emulation
+        if: ${{ matrix.emulated }}
+        uses: docker/setup-qemu-action@v3
+        with:
+          platforms: arm64
+
       - name: Install Magic Nix Cache
         uses: DeterminateSystems/determinate-nix-action@v3
+        with:
+          extra-conf: ${{ matrix.emulated && 'extra-platforms = aarch64-linux' || '' }}
 
       - name: Setup Cachix
         uses: cachix/cachix-action@v15
@@ -21,4 +43,4 @@ jobs:
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
 
       - name: Run Nix Checks
-        run: nix flake check -L
+        run: nix flake check -L --option system ${{ matrix.system }}
