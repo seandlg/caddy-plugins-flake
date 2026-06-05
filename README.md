@@ -71,25 +71,13 @@ nix run .#cloudflare -- list-modules
 nix build .#cloudflare
 ```
 
-### Using Docker (If Nix is not installed)
+### Updating Plugin Hashes
 
-You can run the same checks and builds inside a sandboxed Docker container caching dependencies in a local volume.
+If you add new plugins or want to bump plugin dependencies to their latest versions, you can run the parallel hash updater script. This script uses Python concurrently to calculate hashes for all variants:
 
-Create the cache volume:
 ```bash
-docker volume create nix-store-cache
-```
-
-Run checks, builds, or recalculate hashes:
-```bash
-# Run all native checks
-docker run --rm -v nix-store-cache:/nix -v "$(pwd)":/workspace -w /workspace nixos/nix:latest nix --extra-experimental-features "nix-command flakes" flake check -L
-
-# Recalculate plugin hashes
-./update_hashes.sh
-
-# Run caddy list-modules
-docker run --rm -v nix-store-cache:/nix -v "$(pwd)":/workspace -w /workspace nixos/nix:latest nix --extra-experimental-features "nix-command flakes" run .#cloudflare -- list-modules
+# Calculate and update hashes.json
+uv run update_hashes.py
 ```
 
 ---
@@ -98,4 +86,4 @@ docker run --rm -v nix-store-cache:/nix -v "$(pwd)":/workspace -w /workspace nix
 
 - **Package Registry:** Hashes for each compilation variant are defined in `hashes.json` and read by `flake.nix` during build time.
 - **Nix Checks:** Native Nix tests are defined in the `checks` output. Running `nix flake check` compiles all variants and executes assertions verifying the plugins are correctly built into each Caddy binary.
-- **Nightly Automation:** A GitHub Action runs every night, updates `nixpkgs`, executes `./update_hashes.sh` to fetch the latest plugin versions and recalculate hashes, and opens a Pull Request if changes exist.
+- **Nightly Automation:** A GitHub Action runs every night, updates `nixpkgs`, executes `uv run update_hashes.py` to fetch the latest plugin versions and recalculate hashes, and opens a Pull Request if changes exist.

@@ -23,11 +23,15 @@ jobs:
           name: caddy-plugins-flake
           authToken: '${{ secrets.CACHIX_AUTH_TOKEN }}'
 
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
       - name: Update inputs and recalculate hashes
         run: |
           nix flake update
-          chmod +x update_hashes.sh
-          ./update_hashes.sh
+          uv run update_hashes.py
 
       - name: Create Pull Request with updates
         uses: peter-evans/create-pull-request@v6

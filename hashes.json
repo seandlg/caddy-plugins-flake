@@ -1,7 +1,14 @@
 {
   "cloudflare": "sha256-bzMqxWTqrJ1skZmRTXyEMCKStXpljbqe5r0Ve2cnBfM=",
   "route53": "sha256-3341QME4QDm+Q4nFZHCbfjToSaZi7lCS0gQlG+2BRoU=",
+  "gandi": "sha256-LLv+nm+tQrSB6ucKG3MvCL8Kj7kxINGokosCr+3dFzs=",
+  "digitalocean": "sha256-XEIEYHuRhXs9HBFnmZ7hmeV+9vxRceGbHlkzkrIlexE=",
+  "duckdns": "sha256-ievwHFPgn5Nb/AHpms9glR3iRB+RYCkEnB/HalUwbaY=",
   "ratelimit": "sha256-7PrbuNSTHAoCPpCumXyvAM72EmfefYHfAp7y+caM8ZY=",
+  "dynamicdns": "sha256-lBDAsF2w+IXYu0QdHG42hChR2gGqKlhoiOafSgpPByg=",
+  "security": "sha256-U+9bG0gUuEWUVCqMzJUkTADVRQ/MGh0Youmt5ZGHVIk=",
   "l4": "sha256-CQ4vKkQ9sE6v5C0gcyYPBnDzJiPw5z14a3lY0BLZ81A=",
-  "full": "sha256-RgEPCtBUz8cBsa2YjS5Vcl7D24w+pppCNFbQIW1w4ao="
+  "cache": "sha256-XPlAWDdIeutPARWUFzZ+ILd48shK11kv0MBd3rGxf0s=",
+  "waf": "sha256-LRcWvfL4qQgf5HsJbzA6N2Or5o+FgwvQ9vQuyjoSH/g=",
+  "full": "sha256-8OH3dakn/fHT+q7c0a2TTPcVd7mRhRxPaf3rCYg6+6w="
 }

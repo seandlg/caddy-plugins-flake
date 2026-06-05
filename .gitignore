@@ -1,0 +1,15 @@
+# Nix build results
+result
+result-*
+
+# Python / uv caches and environments
+__pycache__/
+*.pyc
+.venv/
+.uv/
+.pytest_cache/
+
+# OS and Editor configs
+.DS_Store
+.vscode/
+.idea/
