@@ -34,10 +34,18 @@ jobs:
           uv run update_hashes.py
 
       - name: Create Pull Request with updates
+        id: cpr
         uses: peter-evans/create-pull-request@v6
         with:
+          token: ${{ secrets.UPDATE_PR_PAT }}
           commit-message: "chore: update caddy and plugins"
           title: "🚀 Update Caddy & Plugins"
           body: "Automated rebuild with latest Nixpkgs and Caddy plugins."
           branch: "update-caddy"
           delete-branch: true
+
+      - name: Enable Pull Request Automerge
+        if: steps.cpr.outputs.pull-request-number != ''
+        run: gh pr merge --auto --merge "${{ steps.cpr.outputs.pull-request-number }}"
+        env:
+          GH_TOKEN: ${{ secrets.UPDATE_PR_PAT }}
