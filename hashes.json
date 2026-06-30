@@ -6,9 +6,9 @@
   "duckdns": "sha256-BI72FyEpCKTyQ9lRlVcRsPLSyXlfwdOae57KhVTH/M8=",
   "ratelimit": "sha256-MsRTVptWoXJay5AD+jcKKnGgP9ev6bRBM4XrkDE2VNw=",
   "dynamicdns": "sha256-V0RTIVQq/80iK+4vSoR4jqNpP6r4CTn4oJC1WjbHfJA=",
-  "security": "sha256-jEfl5UaTHulvkpFnOuadca4jYbZaYt8Z704ts08jHlM=",
+  "security": "sha256-QoLRkDSZky2nqwq04EdWVe6pnUBuVnVj9xNaG7z3QxY=",
   "l4": "sha256-O6GuC2q1mA/Fa0utb2Yg7ZE73iq13oVYhJI1IVyOvog=",
   "cache": "sha256-8QCjp7iH8BA4nslN2es+gVVm3lRYRvSQJJXtvbVOMoI=",
   "waf": "sha256-DxHmCRC+7mTul2ntb9M2C2cZvYequ4VBRoLTpYq9//0=",
-  "full": "sha256-AGspjMJcK5A5lLC5MyPfTAt4/OhP/WvbHkKWScJ36V4="
+  "full": "sha256-xMKAk2IG5lplB16Rb9RC/AmOTOh2J0+l3hwAtnrvR6Y="
 }
