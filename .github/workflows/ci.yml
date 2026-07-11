@@ -19,9 +19,6 @@ jobs:
             system: aarch64-linux
           - os: macos-14
             system: aarch64-darwin
-          - os: macos-14
-            system: x86_64-darwin
-            rosetta: true
     steps:
       - uses: actions/checkout@v4
 
