@@ -5,10 +5,10 @@
   "digitalocean": "sha256-kGBr1m+R/4XR7DFXLdyArEwFYZgn+O2lQze1gEu41Lo=",
   "duckdns": "sha256-BI72FyEpCKTyQ9lRlVcRsPLSyXlfwdOae57KhVTH/M8=",
   "ratelimit": "sha256-MsRTVptWoXJay5AD+jcKKnGgP9ev6bRBM4XrkDE2VNw=",
-  "dynamicdns": "sha256-V0RTIVQq/80iK+4vSoR4jqNpP6r4CTn4oJC1WjbHfJA=",
+  "dynamicdns": "sha256-3DHwQr6kiDK436kvIaSm/3Y1mA6dKvKqD4FxY85CogE=",
   "security": "sha256-QoLRkDSZky2nqwq04EdWVe6pnUBuVnVj9xNaG7z3QxY=",
   "l4": "sha256-O6GuC2q1mA/Fa0utb2Yg7ZE73iq13oVYhJI1IVyOvog=",
   "cache": "sha256-8QCjp7iH8BA4nslN2es+gVVm3lRYRvSQJJXtvbVOMoI=",
   "waf": "sha256-DxHmCRC+7mTul2ntb9M2C2cZvYequ4VBRoLTpYq9//0=",
-  "full": "sha256-xMKAk2IG5lplB16Rb9RC/AmOTOh2J0+l3hwAtnrvR6Y="
+  "full": "sha256-qbYFkKv6pzmd4ClhlYbHXjvfHGEN7C1LByO1oE7O1sU="
 }
