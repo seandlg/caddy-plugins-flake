@@ -1,14 +1,14 @@
 {
-  "cloudflare": "sha256-xRJ5evsAJ2akg47j3Bt6YDXJOgX88B/rKNP50KSVyNY=",
-  "route53": "sha256-tDFYgWalHKeN/TGqI3o4FBAnWb0GDo4oNEiwZ3yhZPM=",
-  "gandi": "sha256-M9LUWmuujoJsx56V/mfj+LnLy7sSrtNJA1AnS8nK1R4=",
-  "digitalocean": "sha256-89ql1c2XYEdn6eYscmEVy1epSfQw4MCO6Mr6YdHthTc=",
-  "duckdns": "sha256-hdJoUoWpDZEz367Rwhagz5040TMHBReLY+hhHjMfwgM=",
-  "ratelimit": "sha256-nYE5/88oJ9Od6ohlzfr3uybPlNnrqnPccmIqyn1Kz7E=",
-  "dynamicdns": "sha256-ILV2uEMR8BR4pWCHyRx2Cbih4RNHcX05BoQEvg8k7Fc=",
-  "security": "sha256-vXLqt9y/snfNJ0kgLrYJzs7MyhZKCfLS2ipm9nZeypk=",
-  "l4": "sha256-Dz510teYCUvEA7MR8ERpaKsDHS5dBCDO+AjszV96si4=",
-  "cache": "sha256-Vu2DZNbNwZQ3d0uXQRySozuhtuSIKtmleXxL5vLtVsE=",
-  "waf": "sha256-HJVEcKyBK+gSn5qt/3TwUFS8phMuOGPVzmWxwXo2Wg8=",
-  "full": "sha256-yqArRehM1ml0MeYoojGud0Dv7oA+RXz/oWoeOdwhruc="
+  "cloudflare": "sha256-5a5cpFl90pEWt0lUC4ZJQ7g+1//ZvsRhee64Dt9vh5o=",
+  "route53": "sha256-Jb9aDXo46VCRSW299WenY6e9+FO4Xf+/UCEJqncsOjo=",
+  "gandi": "sha256-Sib+pr/rT5oOTnSixWnULKlT3z22m5G+Qa4gQbDonng=",
+  "digitalocean": "sha256-dHVhIgu378vvbEpXwMNihJ2u3OWIjBFyKQvGS9Jwv50=",
+  "duckdns": "sha256-wyAiOK5T67sSOokd/SO0jvvn2qzcN+y/Y0eNArJODTM=",
+  "ratelimit": "sha256-yvcR48Us/ga8WX273mwkAo/mOiD4PpfK5SGBI7hhOSY=",
+  "dynamicdns": "sha256-3HfFoyNmB6zHm9p5HT+waiS/706GkAtGheID4kAbUg4=",
+  "security": "sha256-4Z3EibZn10fsWCTX9hQXz8a0cpvarECikHyFHtLSwro=",
+  "l4": "sha256-wZNe8M044n4POa5LhvzsvZiQ7A0uhI49bdvEtKj1IyE=",
+  "cache": "sha256-bxDG53M1hpKMUhLJkZcX6Up7YIrGrYGFvGYSy0epxjA=",
+  "waf": "sha256-ml37bn1Utbtr9ZmJZNSedG91XTkMtzgpegHgZ1la4Lo=",
+  "full": "sha256-l3aiKRhezFe/rJq6woWJoduHADO2Bwbi7bhLCz53n78="
 }
